@@ -1,0 +1,321 @@
+/**
+ * Site variables
+ */
+
+/**
+ * Colors
+ */
+$grey: #FAFAFA;
+$grey-hover: #e4e4e4;
+$dark-grey: #BDC0BF;
+$light-grey: #F8F8F8;
+$white: #fff;
+$white-hover: #d1d1d1;
+$black: #212121;
+$red: #DB4536;
+$light-green: #A8DAB5;
+
+$green: #2C5E1A;
+$forest-green: #1A4314;
+$seafoam-green: #B2D2A4;
+$lime-green: #32CD30;
+$off-white: hsla(0,0%,100%,.9);
+
+// Fonts
+$font-font-awesome: 'Font Awesome 6 Pro';
+$font-lato: 'Lato', sans-serif;
+$font-inter: 'Inter', sans-serif;
+
+// Font weights
+//$hairline-weight: 100;
+//$thin-weight:     200;
+$light-weight: 300;
+$normal-weight: 400;
+$medium-weight: 500;
+//$semibold-weight: 600;
+$bold-weight: 700;
+//$xbold-weight:    800;
+//$black-weight:    900;
+
+// Content width
+$content-width: 1220px;
+$narrow-content-width: 768px;
+
+// Device widths
+$desktop-large-width: 1660px;
+$desktop-width: 1440px;
+$tablet-large-width: 1280px;
+$tablet-width: 1024px;
+$mobile-width: 767px;
+$mobile-small-width: 600px;
+$mobile-tiny-width: 400px;
+
+// Other
+$nav-height-desktop: 74px;
+$sub-nav-height-desktop: 66px;
+$nav-height-mobile: 60px;
+$border-radius: 12px;
+
+
+// Usages
+$body-font: $font-lato;
+$header-font: $font-inter;
+$site-title-color: $white;
+$nav-color: $white;
+$nav-hover-color: var(--color-highlight);
+$sub-menu-background: rgba(0, 0, 0, 0.2);
+
+
+// Content builder padding
+/*
+$content-builder-padding-top: 120px;
+$content-builder-padding-bottom: 120px;
+$content-builder-tablet-padding-top: 80px;
+$content-builder-tablet-padding-bottom: 80px;
+$content-builder-mobile-padding-top: 50px;
+$content-builder-mobile-padding-bottom: 50px;
+*/
+$content-builder-padding-top: 75px;
+$content-builder-padding-bottom: 75px;
+$content-builder-tablet-padding-top: 40px;
+$content-builder-tablet-padding-bottom: 40px;
+$content-builder-mobile-padding-top: 35px;
+$content-builder-mobile-padding-bottom: 35px;
+
+$mobile-admin-bar: 782px;
+
+$mobile-search-height: 249px;
+
+// Full page header peek
+$header-bottom-peek-desktop: 60px;
+$header-bottom-peek-tablet: 50px;
+$header-bottom-peek-mobile: 100px;
+
+$video-fade-in-speed: 1s;
+
+
+@mixin contentBuilderPadding() {
+    padding-top: $content-builder-padding-top;
+    padding-bottom: $content-builder-padding-bottom;
+
+    @media (max-width: $tablet-width) {
+        padding-top: $content-builder-tablet-padding-top;
+        padding-bottom: $content-builder-tablet-padding-bottom;
+    }
+    @media (max-width: $mobile-width) {
+        padding-top: $content-builder-mobile-padding-top;
+        padding-bottom: $content-builder-mobile-padding-bottom;
+    }
+
+    &.top-padding {
+        padding-bottom: 0;
+    }
+
+    &.bottom-padding {
+        padding-top: 0;
+    }
+
+    &.no-padding {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+@mixin bodyFont() {
+    font-family: $body-font, sans-serif;
+    font-size: 18px;
+    font-weight: var(--body-weight);
+    color: var(--color-text-dark);
+
+    @media (max-width: $mobile-width) {
+        font-size: 16px;
+    }
+}
+
+@mixin container() {
+    .container {
+        // width: 1320px;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+
+        @include containerPadding();
+    }
+}
+
+@mixin contentBuilderPaddingLastSection() {
+    &.last-section {
+        padding-bottom: $content-builder-padding-bottom * 2;
+
+        @media (max-width: $tablet-width) {
+            padding-bottom: $content-builder-tablet-padding-bottom * 2;
+        }
+        @media (max-width: $mobile-width) {
+            padding-bottom: $content-builder-mobile-padding-bottom * 2;
+        }
+    }
+}
+
+@mixin headings() {
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 800;
+        line-height: 1.1em;
+        margin-top: 0;
+        margin-bottom: 0.6em;
+        color: $black;
+        font-family: $header-font, serif;
+        display: inline-block; // Only underline the text width
+        border-bottom: 1px solid $black;
+        padding-bottom: 0.5rem;
+
+        @media (max-width: $mobile-width) {
+            br {
+                display: none;
+            }
+        }
+    }
+
+    h1,
+    .h1 {
+        font-size: 65px;
+
+        @media (max-width: $tablet-large-width) {
+            //font-size: 65px;
+        }
+
+        @media (max-width: $tablet-width) {
+            font-size: 55px;
+        }
+
+
+        @media (max-width: $mobile-width) {
+            font-size: 40px;
+        }
+    }
+
+    h2,
+    .h2 {
+        font-size: 48px;
+
+        @media (max-width: $tablet-width) {
+            font-size: 40px;
+        }
+
+        @media (max-width: $mobile-width) {
+            font-size: 32px;
+        }
+    }
+
+    h3,
+    .h3 {
+        font-size: 30px;
+
+        @media (max-width: $tablet-width) {
+            font-size: 25px;
+        }
+
+        @media (max-width: $mobile-width) {
+            font-size: 22px;
+        }
+    }
+
+    h4,
+    .h4 {
+        font-size: 22px;
+
+        @media (max-width: $tablet-width) {
+            font-size: 20px;
+        }
+
+        @media (max-width: $mobile-width) {
+            font-size: 18px;
+        }
+    }
+
+    h5,
+    .h5 {
+        font-size: 18px;
+
+        @media (max-width: $mobile-width) {
+            font-size: 15px;
+        }
+    }
+
+    h6,
+    .h6 {
+        font-size: 16px;
+
+        @media (max-width: $mobile-width) {
+            font-size: 13px;
+        }
+    }
+
+    .wysiwyg{
+        h1, h2, h3, h4, h5, h6 {
+             color: var(--color-tertiary);
+        }       
+    }
+}
+
+// Transitions
+@mixin transitionCav($time: 0.2s) {
+    transition: color $time, background-color $time, border-color $time, fill $time, opacity $time, background $time, transform $time, box-shadow $time, text-shadow $time, fill $time;
+    -webkit-transition: color $time, background-color $time, border-color $time, fill $time, opacity $time, background $time, transform $time, box-shadow $time, text-shadow $time, fill $time;
+    -moz-transition: color $time, background-color $time, border-color $time, fill $time, opacity $time, background $time, transform $time, box-shadow $time, text-shadow $time, fill $time;
+}
+
+@mixin svgColor($color) {
+    g, path, circle, ellipse {
+        stroke: $color;
+    }
+}
+
+@mixin containerPadding() {
+    @include containerLeft();
+    @include containerRight();
+}
+
+@mixin containerLeft() {
+    padding-left: 140px;
+
+    @media (max-width: $desktop-width) {
+        padding-left: 112px;
+    }
+
+    @media (max-width: $tablet-large-width) {
+        padding-left: 80px;
+    }
+
+    @media (max-width: $tablet-width) {
+        padding-left: 40px;
+    }
+
+    @media (max-width: $mobile-width) {
+        padding-left: 24px;
+    }
+}
+
+@mixin containerRight() {
+    padding-right: 140px;
+
+    @media (max-width: $desktop-width) {
+        padding-right: 112px;
+    }
+
+    @media (max-width: $tablet-large-width) {
+        padding-right: 80px;
+    }
+
+    @media (max-width: $tablet-width) {
+        padding-right: 40px;
+    }
+
+    @media (max-width: $mobile-width) {
+        padding-right: 24px;
+    }
+}
+
+@mixin fadeSlideIn($waitTime) {
+    animation: wait #{$waitTime}
+    fadeSlideIn 0.5s;
+}

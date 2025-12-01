@@ -1,0 +1,48 @@
+#about {
+    .about-grid {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 4rem;
+        align-items: stretch;
+
+        @media (max-width: $tablet-width) {
+            gap: 1rem;
+        }
+
+        @media (min-width: $tablet-width) {
+            flex-direction: row;
+            & > .about-content, & > .profile-image {
+                flex: 1 1 0;
+                max-width: 50%;
+            }
+        }
+
+        @media (min-width: $desktop-width) {
+            & > .about-content {
+                flex: 2 1 0;
+                max-width: 66.66%;
+            }
+            & > .profile-image {
+                flex: 1 1 0;
+                max-width: 33.33%;
+            }
+        }
+    }
+
+    .about-content {
+        p{
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .profile-image {
+        // width: 100%;
+        max-width: 400px;
+        // margin: 0 auto;
+        img{
+            border-radius: 50%;
+        }        
+    }
+}

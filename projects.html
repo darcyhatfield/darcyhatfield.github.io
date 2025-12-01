@@ -1,0 +1,133 @@
+
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/app.js" defer></script>
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="nav-bar">
+            <a href="index.html" class="nav-link">About</a>
+            <a href="projects.html" class="nav-link active">Projects</a>
+            <a href="resume.html" class="nav-link">Resume</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+        </div>
+        
+    </header>
+    
+    <main id="content">
+        <section id="projects">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="project-list">
+                    <div class="project wide high" data-project="spirittrail" data-title="Spirit Trail">
+                        <div class="project-image" style="background-image: url('assets/projects/spirittrail.gif');"></div>
+                        <div class="title-bar">
+                            <div class="title-container">
+                                <p class="project-title">Spirit Trail</p>
+                                <img class="platform-icon" src="assets/images/playdate_icon.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project" data-project="binitright" data-title="Bin It Right">
+                        <div class="project-image" style="background-image: url('assets/projects/binitright.jpg');"></div>
+                        <div class="title-bar">
+                            <div class="title-container">
+                                <p class="project-title">Bin It Right</p>
+                                <img class="platform-icon" src="assets/images/unity_icon.png" alt="">
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="project" data-project="clashcards" data-title="Clash Cards">
+                        <div class="project-image" style="background-image: url('assets/projects/clashcards.gif');"></div>
+                        <div class="title-bar">
+                            <div class="title-container">
+                                <p class="project-title">Clash Cards</p>
+                                <img class="platform-icon" src="assets/images/playdate_icon.png" alt="">
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="project wide" data-project="puckstop" data-title="Puck Stop">
+                        <div class="project-image" style="background-image: url('assets/projects/puckstop.jpg');"></div>
+                        <div class="title-bar">
+                            <div class="title-container">
+                                <p class="project-title">Puck Stop</p>
+                                <img class="platform-icon" src="assets/images/unity_icon.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project" data-project="quest" data-title="Quest">
+                        <div class="project-image" style="background-image: url('assets/projects/quest.jpg');"></div>
+                        <div class="title-bar">
+                            <div class="title-container">
+                                <p class="project-title">Quest</p>
+                                <img class="platform-icon" src="assets/images/unity_icon.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project wide shrink" data-project="doubleshot" data-title="Double Shot">
+                        <div class="project-image" style="background-image: url('assets/projects/doubleshot.jpg');"></div>
+                        <div class="title-bar">
+                            <div class="title-container">
+                                <p class="project-title">Double Shot</p>
+                                <img class="platform-icon" src="assets/images/unity_icon.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project high" data-project="collector" data-title="Collector History Walk">
+                        <div class="project-image" style="background-image: url('assets/projects/collector.jpg');"></div>
+                        <div class="title-bar">
+                            <div class="title-container">
+                                <p class="project-title">Collector History Walk</p>
+                                <img class="platform-icon" src="assets/images/unity_icon.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project wide shrink" data-project="train" data-title="Build The Train">
+                        <div class="project-image" style="background-image: url('assets/projects/buildthetrain.jpg');"></div>
+                        <div class="title-bar">
+                            <div class="title-container">
+                                <p class="project-title">Build The Train</p>
+                                <img class="platform-icon" src="assets/images/unity_icon.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project" data-project="blockbuster" data-title="Blockbuster">
+                        <div class="project-image" style="background-image: url('assets/projects/blockbuster.gif');"></div>
+                        <div class="title-bar">
+                           <div class="title-container">
+                                <p class="project-title">Blockbuster</p>
+                                <img class="platform-icon" src="assets/images/playdate_icon.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>        
+        </section>
+        <div id="modal" class="modal" style="display: none;">
+            <div class="overlay"></div>
+            <div class="modal-container">
+                
+                <h4 class="modal-title h2">Modal Title</h4>
+                <span class="close">&times;</span>
+                <div class="container">
+                    <div id="modal-body">
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </main>     
+    <footer>
+        <div class="container">
+            <p>Site by Darcy Hatfield</p>
+        </div>        
+    </footer>    
+</body>
+</html>

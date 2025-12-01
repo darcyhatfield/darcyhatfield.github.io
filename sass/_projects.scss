@@ -1,0 +1,100 @@
+#projects{
+    
+
+    .project-list{
+        // max-width: 900px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        grid-auto-rows: minmax(300px,auto);
+
+        // Limit to max 4 columns
+        @media (min-width: 1000px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .project{
+            background-color: rgb(228, 228, 228);
+            margin: 0;
+            height: 100%;
+            width: 100%;
+
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            border-radius: $border-radius;
+
+            &.wide {
+                grid-column-end: span 2;
+
+                @media (max-width: 563px) {
+                    grid-column-end: span 1;
+                    grid-row-end: span 1;
+                }
+            }
+
+            &.high{
+                grid-row-end: span 2;
+
+                @media (max-width: 860px) {
+                    grid-column-end: span 2;
+                }
+
+                @media (max-width: 563px) {
+                    grid-column-end: span 1;
+                    grid-row-end: span 1;
+                }
+            }
+
+            &.shrink{
+                @media (max-width: 860px) {
+                    grid-column-end: span 1;
+                }
+            }
+
+            .project-image{
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-position: 50%;
+                transition: all 0.2s ease;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            .title-bar{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                padding-left: 10px;
+                padding-right: 10px;
+                font-weight: 600;
+                font-size: 1.25em;
+                font-family: $header-font, serif;
+                color: $black;
+                background-color: rgba($seafoam-green, 0.9);
+
+                .title-container{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 8px;
+
+                    p{
+                        margin: 10px 0;
+                    }
+
+                    .platform-icon{
+                        width: auto;
+                        height: 24px;
+                    }
+                }
+
+                
+            }
+        }
+    }
+}

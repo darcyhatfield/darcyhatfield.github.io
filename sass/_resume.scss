@@ -1,0 +1,60 @@
+.resume{
+    .section{
+        padding-bottom: 3rem;
+
+        &:last-child{
+            padding-bottom: 0;
+        }
+
+        p{
+            margin: 0;
+        };
+
+        h1, h2, h3, h4, h5, h6{
+            border-bottom: 1px solid $black;
+            padding-bottom: 0.5rem;
+            text-transform: uppercase
+        };
+
+        .bold {
+            font-weight: 700;
+        }
+        
+        .padding-top{
+            padding-top: 1rem;
+        }
+        .padding-top--x2{
+            padding-top: 2rem;
+        }   
+        
+
+        .flex-container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            // gap: 1rem;
+
+            p{
+                margin: 0;
+            }
+
+            div{
+                // flex: 1 1 300px;
+            }
+
+            .right{
+                text-align: left;
+            }   
+
+            .left{
+                text-align: right;
+            }
+        }
+
+        ul{
+            margin: 0;
+            line-height: 1.3em;
+        }
+    }
+}

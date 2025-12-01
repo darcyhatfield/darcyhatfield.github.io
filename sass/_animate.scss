@@ -1,0 +1,110 @@
+$slide-up-distance: 50px;
+$slide-down-distance: $slide-up-distance;
+$os-animate-duration: 0.5s;
+
+
+@mixin os-delay($delay: 0.05s, $base-delay: 0.2s) {
+
+    &[os-delay="0"] {
+        transition-delay: 0s + $base-delay;
+    }
+
+    &[os-delay="1"] {
+        transition-delay: $delay * 1 + $base-delay;
+    }
+
+    &[os-delay="2"] {
+        transition-delay: $delay * 2 + $base-delay;
+    }
+
+    &[os-delay="3"] {
+        transition-delay: $delay * 3 + $base-delay;
+    }
+
+    &[os-delay="4"] {
+        transition-delay: $delay * 4 + $base-delay;
+    }
+
+    &[os-delay="5"] {
+        transition-delay: $delay * 5 + $base-delay;
+    }
+
+    &[os-delay="6"] {
+        transition-delay: $delay * 6 + $base-delay;
+    }
+
+    &[os-delay="7"] {
+        transition-delay: $delay * 7 + $base-delay;
+    }
+
+    &[os-delay="8"] {
+        transition-delay: $delay * 8 + $base-delay;
+    }
+
+    &[os-delay="9"] {
+        transition-delay: $delay * 9 + $base-delay;
+    }
+
+    &[os-delay="10"] {
+        transition-delay: $delay * 10 + $base-delay;
+    }
+
+    &[os-delay="11"] {
+        transition-delay: $delay * 11 + $base-delay;
+    }
+
+    &[os-delay="12"] {
+        transition-delay: $delay * 12 + $base-delay;
+    }
+
+    &[os-delay="13"] {
+        transition-delay: $delay * 13 + $base-delay;
+    }
+
+    &[os-delay="14"] {
+        transition-delay: $delay * 14 + $base-delay;
+    }
+
+    &[os-delay="15"] {
+        transition-delay: $delay * 15 + $base-delay;
+    }
+}
+
+.os-animate {
+
+    &.os-activated,
+    .os-activated {
+
+        &.to-slide-up,
+        .to-slide-up {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        &.to-slide-down,
+        .to-slide-down {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    &.to-slide-up,
+    .to-slide-up {
+        opacity: 0;
+        transform: translateY($slide-up-distance);
+
+        transition: opacity $os-animate-duration, transform $os-animate-duration;
+
+        @include os-delay();
+    }
+
+    &.to-slide-down,
+    .to-slide-down {
+        opacity: 0;
+        transform: translateY(-$slide-down-distance);
+
+        transition: opacity $os-animate-duration, transform $os-animate-duration;
+
+        @include os-delay();
+    }
+}
