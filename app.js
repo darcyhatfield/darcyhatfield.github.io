@@ -67,13 +67,15 @@ document.addEventListener('DOMContentLoaded', function () {
 // Modal Functionality
 function initModalTriggers() {
     const modal = document.getElementById('modal');
+    const modalContainer = modal.querySelector('.modal-container');
     const modalBody = document.getElementById('modal-body');
     const closeBtn = document.querySelector('.modal .close');
     const projectLinks = document.querySelectorAll('.project');
+    const websiteLinks = document.querySelectorAll('.website');
     const overlay = document.querySelector('.modal .overlay');
     const title = document.querySelector('.modal .modal-title');
 
-    if (!modal || !modalBody || !closeBtn || projectLinks.length === 0 || !overlay || !title) {
+    if (!modal || !modalBody || !closeBtn || (!projectLinks.length && !websiteLinks.length) || !overlay || !title) {
         return;
     }
 
@@ -86,7 +88,28 @@ function initModalTriggers() {
                 .then(response => response.text())
                 .then(html => {
                     modalBody.innerHTML = html;
-                    modal.style.display = 'block';                    
+                    modal.style.display = 'block';
+                    if (modalContainer) modalContainer.scrollTop = 0;
+                    // modalBody.scrollTop = 0;
+                    // window.scrollTo({ top: 0, behavior: 'smooth' });
+                    document.body.classList.add('modal-open');
+                    title.innerText = modaltitle;
+                });
+        });
+    });
+
+    websiteLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const website = this.getAttribute('data-website');
+            const modaltitle = this.getAttribute('data-title');
+            fetch('/websites/' + website + '.html')
+                .then(response => response.text())
+                .then(html => {
+                    modalBody.innerHTML = html;
+                    modal.style.display = 'block';  
+                    if (modalContainer) modalContainer.scrollTop = 0;
+                    // modalBody.scrollTop = 0;
                     // window.scrollTo({ top: 0, behavior: 'smooth' });
                     document.body.classList.add('modal-open');
                     title.innerText = modaltitle;

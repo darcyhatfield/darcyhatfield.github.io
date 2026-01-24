@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,94 +8,104 @@
     <script src="/app.js" defer></script>
     <title>Portfolio</title>
 </head>
+
 <body>
     <header>
         <div class="container">
             <div class="nav-bar">
-            <a href="index.html" class="nav-link">About</a>
-            <a href="projects.html" class="nav-link">Projects</a>
-            <a href="websites.html" class="nav-link active">Websites</a>
-            <a href="resume.html" class="nav-link">Resume</a>
-            <a href="contact.html" class="nav-link">Contact</a>
-        </div>        
-    </header>    
+                <a href="index.html" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="websites.html" class="nav-link active">Websites</a>
+                <a href="resume.html" class="nav-link">Resume</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+    </header>
     <main id="content">
         <section id="websites">
             <div class="container">
                 <h2>Websites</h2>
                 <div class="websites-list">
-                    <div class="website wide high">
-                        <a href="https://seeingmachines.com/" target="_blank">
-                            <div class="website-image" style="background-image: url('assets/websites/seeingmachines.jpg');"></div>
-                            <div class="title-bar">
-                                <div class="title-container">
-                                    <p class="website-title">Seeing Machines</p>
-                                </div>
+                    <div class="website wide high" data-website="seeingmachines" data-title="Seeing Machines">
+                        <div class="website-image" style="background-image: url('assets/websites/seeingmachines.jpg');">
+                        </div>
+                        <div class="title-bar">
+                            <div class="title-container">
+                                <p class="website-title">Seeing Machines</p>
                             </div>
-                        </a>
+                        </div>
                     </div>
-                    <div class="website">
-                        <a href="https://https://railsafetyweek.com.au/" target="_blank">
-                            <div class="website-image" style="background-image: url('assets/websites/tracksville.jpg');"></div>
-                            <div class="title-bar">
-                                <div class="title-container">
-                                    <p class="website-title">Tracksville Trivia</p>
-                                </div>                            
+                    <div class="website" data-website="tracksville" data-title="Tracksville Trivia">
+                        <div class="website-image" style="background-image: url('assets/websites/tracksville.jpg');">
+                        </div>
+                        <div class="title-bar">
+                            <div class="title-container">
+                                <p class="website-title">Tracksville Trivia</p>
                             </div>
-                        </a>
-                    </div>                                    
-                    <div class="website">
-                        <a href="https://responsiblewagering.com.au/" target="_blank">
-                            <div class="website-image" style="background-image: url('assets/websites/rwa.jpg');"></div>
-                            <div class="title-bar">
-                                <div class="title-container">
-                                    <p class="website-title">Responsible Wagering Australia</p>
-                                </div>
-                            </div>
-                        </a>
+                        </div>
                     </div>
-                    <div class="website wide">
-                        <a href="https://omaya.com.au/" target="_blank">
-                            <div class="website-image" style="background-image: url('assets/websites/omaya.jpg');"></div>
-                            <div class="title-bar">
-                                <div class="title-container">
-                                    <p class="website-title">Omaya</p>
-                                </div>
+                    <div class="website" data-website="marq" data-title="MARQ">
+                        <div class="website-image" style="background-image: url('assets/websites/marq.jpg');"></div>
+                        <div class="title-bar">
+                            <div class="title-container">
+                                <p class="website-title">MARQ</p>
                             </div>
-                        </a>
-                    </div>    
-                    <div class="website">
-                        <a href="https://www.canberra.edu.au/media/campus-master-plan/3d-map/#" target="_blank">
-                            <div class="website-image" style="background-image: url('assets/websites/uc_masterplan.jpg');"></div>
-                            <div class="title-bar">
-                                <div class="title-container">
-                                    <p class="website-title">UC Campus Master Plan</p>
-                                </div>
-                            </div>
-                        </a>
+                        </div>
                     </div>
-                    <div class="website wide shrink">
-                        <a href="https://unitingcare.org.au/" target="_blank">
-                            <div class="website-image" style="background-image: url('assets/websites/unitingcare.jpg');"></div>
-                            <div class="title-bar">
-                                <div class="title-container">
-                                    <p class="website-title">UnitingCare</p>
-                                </div>
+                    <div class="website high" data-website="bpw" data-title="Business Package Website">
+                        <div class="website-image" style="background-image: url('assets/websites/omaya_portrait.jpg');"></div>
+                        <div class="title-bar">
+                            <div class="title-container">
+                                <p class="website-title">Business Package Website</p>
                             </div>
-                        </a>
-                    </div>
-                    <div class="website">
-                        <a href="https://majorfinancial.com.au/" target="_blank">
-                            <div class="website-image" style="background-image: url('assets/websites/majorfinancial.jpg');"></div>
-                            <div class="title-bar">
-                                <div class="title-container">
-                                    <p class="website-title">Major Financial</p>
-                                </div>
+                        </div>
+                    </div>     
+                     <div class="website " data-website="caps" data-title="Caps Go Big">
+                        <div class="website-image" style="background-image: url('assets/websites/capsgobig.jpg');">
+                        </div>
+                        <div class="title-bar">
+                            <div class="title-container">
+                                <p class="website-title">Caps Go Big</p>
                             </div>
-                        </a>
+                        </div>
+                    </div>               
+                    <div class="website wide shrink" data-website="alivio" data-title="Alivio Tourist Park">
+                        <div class="website-image" style="background-image: url('assets/websites/alivio.jpg');">
+                        </div>
+                        <div class="title-bar">
+                            <div class="title-container">
+                                <p class="website-title">Alivio Tourist Park</p>
+                            </div>
+                        </div>
+                    </div>                     
+                    <div class="website" data-website="uc" data-title="UC Campus Master Plan">
+                        <div class="website-image" style="background-image: url('assets/websites/uc_masterplan.jpg');">
+                        </div>
+                        <div class="title-bar">
+                            <div class="title-container">
+                                <p class="website-title">UC Campus Master Plan</p>
+                            </div>
+                        </div>
+                    </div>                  
+                </div>
+            </div>
+        </section>
+        <div id="modal" class="modal" style="display: none;">
+            <div class="overlay"></div>
+            <div class="modal-container">
+                <h4 class="modal-title h2">Modal Title</h4>
+                <span class="close">&times;</span>
+                <div class="container">
+                    <div id="modal-body">
                     </div>
                 </div>
-            </div>        
-        </section>
-    </main>     
-    
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>Site by Darcy Hatfield</p>
+        </div>
+    </footer>
+</body>
+
+</html>

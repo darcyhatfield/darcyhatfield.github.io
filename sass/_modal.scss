@@ -18,7 +18,7 @@
         height: 100%;
         background-color: rgba(0, 0, 0, 0.85);
         opacity: 0;
-        transition: opacity 5.3s ease;
+        transition: opacity 0.5s ease;
         cursor: pointer;
         pointer-events: none;
     }
@@ -97,6 +97,14 @@
             p{
                 &:first-child {
                     margin-top: 0;
+                }
+
+                &.bold {
+                    font-weight: 600;
+                }
+
+                &.underline{
+                    text-decoration: underline;
                 }
             }
         }
